@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let API = APIHanlder()
+    let API = OctoPrint()
     
     @IBAction func home() {
         API.home()
@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         API.getTemp()
     }
 
-
+    @IBAction func uploadFile() {
+        API.uploadFile("test.gcode", destinationPath: "local")
+    }
 }
 
