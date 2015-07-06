@@ -13,7 +13,7 @@ import Foundation
 
 class OctoPrint {
     //This property shouldn't be needed when mdns discovery is implemented?
-    let IP = "192.168.1.40"
+    let IP = "octopi.local"
     //This should be dinamically obtained when session keys are implemented
     let API_KEY = "31D19A28F79D4E29A4592437F5D8A90A"
     //content type: As soon as i have acces to internet it'll change this to a enum type
