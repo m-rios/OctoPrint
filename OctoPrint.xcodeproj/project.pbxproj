@@ -14,6 +14,8 @@
 		AC05AA6A1B382B3A00D420D1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC05AA681B382B3A00D420D1 /* LaunchScreen.xib */; };
 		AC05AA761B382B3A00D420D1 /* OctoPrintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05AA751B382B3A00D420D1 /* OctoPrintTests.swift */; };
 		AC05AA801B382B7F00D420D1 /* OctoPrintAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05AA7F1B382B7F00D420D1 /* OctoPrintAPI.swift */; };
+		AC7793AE1B4AEB8000B5B6A2 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7793AD1B4AEAC300B5B6A2 /* Charts.framework */; };
+		AC7793AF1B4AEB8000B5B6A2 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC7793AD1B4AEAC300B5B6A2 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ACDC808C1B44BEA900EC5520 /* test.gcode in Resources */ = {isa = PBXBuildFile; fileRef = ACDC808B1B44BEA900EC5520 /* test.gcode */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +27,35 @@
 			remoteGlobalIDString = AC05AA591B382B3A00D420D1;
 			remoteInfo = OctoPrint;
 		};
+		AC7793AC1B4AEAC300B5B6A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC7793A81B4AEAC300B5B6A2 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
+			remoteInfo = Charts;
+		};
+		AC7793B01B4AEB8000B5B6A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC7793A81B4AEAC300B5B6A2 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
+			remoteInfo = Charts;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AC7793B21B4AEB8000B5B6A2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AC7793AF1B4AEB8000B5B6A2 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AC05AA5A1B382B3A00D420D1 /* OctoPrint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OctoPrint.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +69,7 @@
 		AC05AA741B382B3A00D420D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC05AA751B382B3A00D420D1 /* OctoPrintTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OctoPrintTests.swift; sourceTree = "<group>"; };
 		AC05AA7F1B382B7F00D420D1 /* OctoPrintAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OctoPrintAPI.swift; sourceTree = "<group>"; };
+		AC7793A81B4AEAC300B5B6A2 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
 		ACDC808B1B44BEA900EC5520 /* test.gcode */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.gcode; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC7793AE1B4AEB8000B5B6A2 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				AC05AA5C1B382B3A00D420D1 /* OctoPrint */,
+				AC7793A81B4AEAC300B5B6A2 /* Charts.xcodeproj */,
 				AC05AA721B382B3A00D420D1 /* OctoPrintTests */,
 				AC05AA5B1B382B3A00D420D1 /* Products */,
 			);
@@ -118,6 +151,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AC7793A91B4AEAC300B5B6A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC7793AD1B4AEAC300B5B6A2 /* Charts.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,10 +169,12 @@
 				AC05AA561B382B3A00D420D1 /* Sources */,
 				AC05AA571B382B3A00D420D1 /* Frameworks */,
 				AC05AA581B382B3A00D420D1 /* Resources */,
+				AC7793B21B4AEB8000B5B6A2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AC7793B11B4AEB8000B5B6A2 /* PBXTargetDependency */,
 			);
 			name = OctoPrint;
 			productName = OctoPrint;
@@ -185,6 +228,12 @@
 			mainGroup = AC05AA511B382B3A00D420D1;
 			productRefGroup = AC05AA5B1B382B3A00D420D1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = AC7793A91B4AEAC300B5B6A2 /* Products */;
+					ProjectRef = AC7793A81B4AEAC300B5B6A2 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				AC05AA591B382B3A00D420D1 /* OctoPrint */,
@@ -192,6 +241,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		AC7793AD1B4AEAC300B5B6A2 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = AC7793AC1B4AEAC300B5B6A2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AC05AA581B382B3A00D420D1 /* Resources */ = {
@@ -240,6 +299,11 @@
 			isa = PBXTargetDependency;
 			target = AC05AA591B382B3A00D420D1 /* OctoPrint */;
 			targetProxy = AC05AA701B382B3A00D420D1 /* PBXContainerItemProxy */;
+		};
+		AC7793B11B4AEB8000B5B6A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = AC7793B01B4AEB8000B5B6A2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
